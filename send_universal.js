@@ -43,7 +43,7 @@ const args = (0, arg_1.default)({
 let givers = givers_1.givers1000;
 if (args['--givers']) {
     const val = args['--givers'];
-    const allowed = [100, 1000];
+    const allowed = [100, 1000, 10000, 100000];
     if (!allowed.includes(val)) {
         throw new Error('Invalid --givers argument');
     }
@@ -55,6 +55,14 @@ if (args['--givers']) {
         case 1000:
             givers = givers_1.givers1000;
             console.log('Using givers 1 000');
+            break;
+        case 10000:
+            givers = givers_1.givers10000;
+            console.log('Using givers 10000');
+            break;
+        case 100000:
+            givers = givers_1.givers100000;
+            console.log('Using givers 100 000');
             break;
     }
 }
